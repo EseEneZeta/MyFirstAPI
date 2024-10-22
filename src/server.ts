@@ -5,7 +5,7 @@ const app = express();
 
 const port = process.env.HOST_PORT ?? '3000';
 
-const students_array = [
+const personas_array = [
   "Joshua Abril Pangan", "Satenik Avetisyan", "Paul Aznar Tequén", "Adrià Baltrons Mata",
   "Roger Bustos Julià", "Óscar Cruañas Gonzalbez", "Pol Cubo Pizarro",
   "Santiago Fernández-Pedrera López", "Oriol Fontcuberta Aduart", "Daniel Galeano García",
@@ -17,15 +17,15 @@ const students_array = [
   "Albert Garrido Pintado", "Óscar Parra Raya", "Alex Blay Estrada",
   "Rafel Herrerias Cuscullola", "Alejandro Pascual González"
 ];
-const contador_students = students_array.length;
+const contador_personas = personas_array.length;
 
-app.get('/students', (_, res) => {
+app.get('/personas', (_, res) => {
 
-res.json({contador_students, students_array});
+res.json({contador_personas, personas_array});
 });
 
 app.listen(port, () => {
 
-  console.log(`[server]: Server is running at http://localhost:${port}/students`);
+  console.log(`[server]: Server is running at http://localhost:${port}/personas`);
 });
 export default app;
